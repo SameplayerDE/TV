@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/vol"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:background="@drawable/button_round"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/soundGroup"
+        app:layout_constraintStart_toStartOf="@+id/soundGroup"
+        app:layout_constraintTop_toTopOf="@+id/soundGroup"
+        tools:text="100" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="123dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperGroup">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/upperGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/power_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_round"
+            android:backgroundTint="@color/warning"
+            android:gravity="center"
+            android:text="&#xf011;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:id="@+id/functionGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.sameplayer.tv.FontAwesome
+                android:id="@+id/zoom_in"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/button_round"
+                android:backgroundTint="@color/normal"
+                android:gravity="center"
+                android:text="&#xf00e;"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <de.sameplayer.tv.FontAwesome
+                android:id="@+id/zoom_out"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_round"
+                android:backgroundTint="@color/normal"
+                android:gravity="center"
+                android:text="&#xf010;"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/soundGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/vol_up"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_upper_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf067;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/mute"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf6a9;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/vol_down"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_lower_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf068;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/channelGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/ch_up"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_upper_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf067;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/ch"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="P"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/ch_down"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_lower_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf068;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_toEndOf="@+id/Home"
+            android:layout_toRightOf="@+id/Home">
+
+            <de.sameplayer.tv.FontAwesome
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/searchChannel"
+                android:layout_alignEnd="@+id/searchChannel"
+                android:layout_alignRight="@+id/searchChannel"
+                android:layout_alignBottom="@+id/searchChannel"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:text="&#xf002;"
+                android:textColor="@color/dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/searchChannel"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="21dp"
+                android:background="@drawable/button_rounded"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingRight="35dp"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/Home"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_lower_right_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf015;"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

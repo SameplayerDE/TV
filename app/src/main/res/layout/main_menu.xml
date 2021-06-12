@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/Info"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_lower_right_round"
+            android:gravity="center"
+            android:backgroundTint="@color/normal"
+            android:textColor="#FFFFFF"
+            android:text="&#xf128;"
+            android:textSize="24sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/Settings"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_lower_left_round"
+            android:gravity="center"
+            android:backgroundTint="@color/normal"
+            android:text="&#xf7d9;"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
