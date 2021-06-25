@@ -38,7 +38,7 @@ public class ConnectionDialog extends DialogFragment {
         setCancelable(false);
         loader = view.findViewById(R.id.loader);
 
-        rotateAnimation.setDuration(2000);
+        rotateAnimation.setDuration(4000);
         rotateAnimation.setRepeatCount(Animation.INFINITE);
         rotateAnimation.setInterpolator(new LinearInterpolator());
 
@@ -53,7 +53,7 @@ public class ConnectionDialog extends DialogFragment {
             public void run() {
                 checkConnection();
             }
-        }, 2000);
+        }, 4000);
 
         return builder.create();
     }
@@ -62,9 +62,11 @@ public class ConnectionDialog extends DialogFragment {
         if (ConnectionManager.establishConnection() == false) {
             dismiss();
             MainActivity.Instance.show("connection_fail");
+            MainActivity.Instance.changeTo("main");
         }else{
             dismiss();
             AppState.updateConnection();
+            MainActivity.Instance.changeTo("main");
         }
     }
 }

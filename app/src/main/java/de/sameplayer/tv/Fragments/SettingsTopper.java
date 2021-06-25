@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import de.sameplayer.tv.Classes.AppState;
 import de.sameplayer.tv.FontAwesome;
 import de.sameplayer.tv.MainActivity;
 import de.sameplayer.tv.R;
@@ -24,7 +25,11 @@ public class SettingsTopper extends Fragment {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.Instance.changeTo("main");
+                if (!AppState.isPip()) {
+                    MainActivity.Instance.changeTo("main");
+                }else{
+                    MainActivity.Instance.changeTo("main_pip");
+                }
             }
         });
 

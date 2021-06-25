@@ -4,8 +4,10 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.media.AudioAttributes;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -25,6 +27,7 @@ import de.sameplayer.tv.Fragments.ConnectionFailDialog;
 import de.sameplayer.tv.Fragments.InfoFragment;
 import de.sameplayer.tv.Fragments.InfoTopper;
 import de.sameplayer.tv.Fragments.MainFragment;
+import de.sameplayer.tv.Fragments.MainPipFragment;
 import de.sameplayer.tv.Fragments.MainTopper;
 import de.sameplayer.tv.Fragments.SettingsFragment;
 import de.sameplayer.tv.Fragments.SettingsTopper;
@@ -47,11 +50,12 @@ public class MainActivity extends AppCompatActivity {
         AppState = new AppState();
         AppState.loadFromFile();
 
-        ChannelManager = new ChannelManager(this);
+        ChannelManager = new ChannelManager();
         FragmentManager = new FragmentManager();
         DialogManager = new DialogManager();
 
         FragmentManager.add(new FragmentPackage(new MainFragment(), new MainTopper()), "main");
+        FragmentManager.add(new FragmentPackage(new MainPipFragment(), new MainTopper()), "main_pip");
         FragmentManager.add(new FragmentPackage(new ChannelListFragment(), new ChannelTopper()), "ch");
         FragmentManager.add(new FragmentPackage(new SettingsFragment(), new SettingsTopper()), "settings");
         FragmentManager.add(new FragmentPackage(new InfoFragment(), new InfoTopper()), "info");
@@ -63,11 +67,10 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        changeTo("main");
-
         if (ConnectionManager.hasConnection() == false) {
             show("connection");
         }
+
     }
 
     public void changeContainerTo(Fragment fragment) {

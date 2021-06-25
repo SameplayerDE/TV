@@ -14,40 +14,49 @@
             android:id="@+id/preview"
             android:layout_width="131dp"
             android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:backgroundTint="@color/gray"
             app:srcCompat="@android:mipmap/sym_def_app_icon" />
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="166dp"
+            android:layout_width="159dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="14dp"
             android:layout_marginLeft="14dp"
-            android:layout_marginEnd="89dp"
-            android:layout_marginRight="89dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginRight="107dp"
             android:layout_marginBottom="52dp"
             android:layout_toEndOf="@+id/preview"
             android:layout_toRightOf="@+id/preview"
-            android:text="TextView"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:textColor="#ffffff"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/show"
-            android:layout_width="166dp"
+            android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="14dp"
             android:layout_marginLeft="14dp"
-            android:layout_marginEnd="89dp"
-            android:layout_marginRight="89dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginRight="108dp"
             android:layout_marginBottom="29dp"
             android:layout_toEndOf="@+id/preview"
             android:layout_toRightOf="@+id/preview"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:text="TextView"
             android:textColor="#ffffff" />
 
@@ -71,6 +80,16 @@
                 android:orientation="horizontal">
 
                 <de.sameplayer.tv.FontAwesome
+                    android:id="@+id/opt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="&#xf08d;"
+                    android:textColor="@color/gray"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+                <de.sameplayer.tv.FontAwesome
                     android:id="@+id/fav"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -79,16 +98,25 @@
                     android:textColor="@color/gray"
                     android:textSize="24sp" />
 
-                <de.sameplayer.tv.FontAwesome
-                    android:id="@+id/opt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="&#xf0c9;"
-                    android:textColor="@color/gray"
-                    android:textSize="24sp" />
             </LinearLayout>
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/channelID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="47dp"
+            android:layout_height="57dp"
+            android:layout_alignEnd="@+id/preview"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="42dp"
+            app:srcCompat="@drawable/play" />
 
     </RelativeLayout>
 
@@ -99,4 +127,5 @@
         android:backgroundTint="#ffffff"
         android:alpha="57"
         android:background="?android:attr/listDivider" />
+
 </LinearLayout>

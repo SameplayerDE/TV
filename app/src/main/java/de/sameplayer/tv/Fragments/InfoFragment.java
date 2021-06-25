@@ -4,11 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import de.sameplayer.tv.Classes.Managers.ChannelManager;
+import de.sameplayer.tv.Fragments.Adapter.ChannelArrayAdapter;
+import de.sameplayer.tv.Fragments.Adapter.PinnedChannelAdapter;
+import de.sameplayer.tv.MainActivity;
 import de.sameplayer.tv.R;
 
 public class InfoFragment extends Fragment {
@@ -17,6 +22,7 @@ public class InfoFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_info, container, false);
+
         return view;
     }
 }

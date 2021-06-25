@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="246dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperGroup">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/swap"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="0"
+            android:background="@drawable/ripple_rounded"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf362;"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/livepause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vol"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/button_round"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/soundGroup"
+        app:layout_constraintStart_toStartOf="@+id/soundGroup"
+        app:layout_constraintTop_toTopOf="@+id/soundGroup"
+        tools:text="100" />
+
+    <LinearLayout
+        android:id="@+id/soundGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actions"
+        app:layout_constraintVertical_bias="0.100000024">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/vol_up"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ripple_upper_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf067;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/mute"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ripple_rounded"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf6a9;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/vol_down"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/ripple_lower_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf068;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/currprogramm"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_left_round"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/channelGroup"
+        app:layout_constraintEnd_toEndOf="@+id/channelGroup"
+        app:layout_constraintTop_toTopOf="@+id/channelGroup"
+        tools:text="Aktuelles Programm" />
+
+    <LinearLayout
+        android:id="@+id/channelGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actions"
+        app:layout_constraintVertical_bias="0.100000024">
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/ch_up"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ripple_upper_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf067;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/ch"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="P"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+        <de.sameplayer.tv.FontAwesome
+            android:id="@+id/ch_down"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/ripple_lower_round"
+            android:backgroundTint="@color/normal"
+            android:gravity="center"
+            android:text="&#xf068;"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/upperGroup"
+        android:layout_width="408dp"
+        android:layout_height="186dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center">
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:background="@drawable/switch_thumb"
+                android:gravity="center"
+                android:showText="false"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:textColorLink="@color/gray"
+                android:textOn="Eingeschaltet"
+                android:thumbTint="@color/normal_dark"
+                android:thumbTintMode="multiply"
+                android:track="@drawable/switch_thumb" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/functionGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <de.sameplayer.tv.FontAwesome
+                android:id="@+id/zoom_out"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_round"
+                android:backgroundTint="@color/normal"
+                android:gravity="center"
+                android:text="&#xf010;"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/pip"
+                android:layout_width="94dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/ripple_round"
+                android:backgroundTint="@color/normal"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="&#xf00e;"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                tools:src="@drawable/pip_active" />
+
+            <de.sameplayer.tv.FontAwesome
+                android:id="@+id/zoom_in"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_round"
+                android:backgroundTint="@color/normal"
+                android:gravity="center"
+                android:text="&#xf00e;"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

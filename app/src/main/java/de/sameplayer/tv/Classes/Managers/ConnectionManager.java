@@ -21,6 +21,11 @@ public class ConnectionManager {
         try {
             httpRequest = new HttpRequest("10.0.2.2", 6000, false);
             //httpRequest = new HttpRequest("192.168.178.63", 6000, false);
+            new Thread(() -> {
+                ChannelManager.setChannelJson(scanChannels());
+             }).start();
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -75,7 +80,7 @@ public class ConnectionManager {
         return null;
     }
 
-    public static void powerOff() {
+  public static void powerOff() {
         processCommand("powerOff");
         connection = false;
         init = false;
@@ -94,10 +99,10 @@ public class ConnectionManager {
     }
 
     public static JSONObject scanChannels() {
-        //new Thread(() -> {
-        //    JSONObject jsonObject = ConnectionManager.scanChannels();
-        //    System.out.println(jsonObject.toString());
-        //}).start();
+        /**new Thread(() -> {
+            JSONObject jsonObject = ConnectionManager.scanChannels();
+            System.out.println(jsonObject.toString());
+        }).start();**/
         return processCommand("scanChannels");
     }
 

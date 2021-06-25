@@ -54,22 +54,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <de.sameplayer.tv.FontAwesome
-            android:id="@+id/power_btn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/ripple_round"
-            android:backgroundTint="@color/warning"
-            android:gravity="center"
-            android:text="&#xf011;"
-            android:textColor="#FFFFFF"
-            android:textSize="36sp" />
-
         <LinearLayout
-            android:id="@+id/functionGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <de.sameplayer.tv.FontAwesome
@@ -84,20 +72,18 @@
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
-            <ImageButton
-                android:id="@+id/pip"
-                android:layout_width="94dp"
-                android:layout_height="60dp"
+            <de.sameplayer.tv.FontAwesome
+                android:id="@+id/power_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:background="@drawable/ripple_round"
-                android:backgroundTint="@color/normal"
-                android:clickable="true"
+                android:backgroundTint="@color/warning"
                 android:gravity="center"
-                android:text="&#xf00e;"
+                android:text="&#xf011;"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                tools:src="@drawable/pip_inactive" />
+                android:textSize="36sp" />
 
             <de.sameplayer.tv.FontAwesome
                 android:id="@+id/zoom_in"
@@ -113,6 +99,28 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/functionGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/pip"
+                android:layout_width="94dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ripple_round"
+                android:backgroundTint="@color/normal"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="&#xf00e;"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                tools:src="@drawable/pip_inactive" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -120,12 +128,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actions"
-        app:layout_constraintVertical_bias="0.100000024">
+        app:layout_constraintVertical_bias="1.0">
 
         <de.sameplayer.tv.FontAwesome
             android:id="@+id/ch_up"
@@ -169,11 +178,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="68dp"
+        android:layout_marginBottom="24dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actions"
-        app:layout_constraintVertical_bias="0.100000024">
+        app:layout_constraintVertical_bias="1.0">
 
         <de.sameplayer.tv.FontAwesome
             android:id="@+id/vol_up"
@@ -220,7 +230,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
         android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -230,6 +240,7 @@
             android:id="@+id/swap"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="0"
             android:background="@drawable/ripple_rounded"
             android:backgroundTint="@color/normal"
@@ -242,6 +253,7 @@
             android:id="@+id/livepause"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0"
             android:gravity="center"
             android:orientation="horizontal">
